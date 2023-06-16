@@ -27,10 +27,10 @@
 		
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
 </head>
 <body>
 	<!-- Primary Page Layout
@@ -83,18 +83,17 @@
 	<div id="arrow"><a href="#profile" class="scroll" >About Me</a></div>
 	</div>	
 
-
 <div id="cbp-so-scroller" class="cbp-so-scroller">
 	<nav id="navigation">
-		<a href="#home" class="scroll" >
-                    <ul   id="menu">
-                        <li>
+		<a href="#home" class="scroll"/>
+                    <ul id="menu">
+                        <li class="current">
                             <a href="#home" class="scroll">Home</a>
                         </li>
                         <li class="current">
                             <a href="#profile" class="scroll">About Me</a>
                         </li>
-                        <li>
+                        <li class="current">
                             <a href="#contact" class="scroll">contact</a>
                         </li>
                     </ul>
@@ -140,6 +139,7 @@
 					If you're interested in discussing potential collaboration opportunities, industry trends, or simply sharing insights, please don't hesitate to reach out.
 					I'm eager to connect with professionals from diverse backgrounds and industries, as I strongly believe that diverse perspectives drive innovation and foster creativity.
 					Thank you for visiting my profile, and I look forward to connecting with you!</p>
+			</div>
 			</div>
 			</section>
 			</div>
@@ -229,20 +229,22 @@
 					<label for="name">Name: * 
 						<span class="error" id="err-name">please enter name</span>
 					</label>
-					<input name="name" id="name" type="text" />
+					<input type="text" placeholder="Name " id="name" name="name" required>
 					<label for="email">E-Mail: * 
 						<span class="error" id="err-email">please enter e-mail</span>
 						<span class="error" id="err-emailvld">e-mail is not a valid format</span>
 					</label>
-					<input name="email" id="email" type="text" />
+					<input type="email" placeholder="Email"id="email" name="email" required>
 					<label for="message">Message:</label>
-					<textarea name="message" id="message"></textarea>
-					<button class="send_message" id="send">Submit</button>
+					<input type="message" placeholder="message" id="message" name="message" class="message_input" required>
+					<button type="submit">Submit</button>
 					<div class="error" id="err-form">There was a problem validating the form please check!</div>
 					<div class="error" id="err-timedout">The connection to the server timed out!</div>
 					<div class="error" id="err-state"></div>
 				</form>
-				<div id="ajaxsuccess">Successfully sent!!</div>	
+				<form action="/success" method="post">>
+				<div id="ajaxsuccess">Successfully sent!!</div>
+				</form>
 			</div>
 		</section>	
 		</div>
@@ -250,6 +252,7 @@
 		<div class="background-pat1-last">	
 		<div class="contact-info">
 		</div>
+	</div>
 	</div>
 	<!-- JAVASCRIPT
     ================================================== -->

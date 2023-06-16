@@ -48,4 +48,12 @@ public class MyPageController {
                 .body(resource);
     }
 
+    @GetMapping("/index")
+    public ModelAndView index()
+    {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
 }

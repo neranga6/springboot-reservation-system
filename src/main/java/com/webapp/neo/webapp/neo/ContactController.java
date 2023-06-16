@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
@@ -37,6 +38,13 @@ public class ContactController {
                 + "Message: " + message;
         emailService.sendEmail(to, subject, content);
 
-        return new RedirectView("/contact?success");
+        return new RedirectView("/success");
+    }
+
+    @GetMapping("/success")
+    public ModelAndView successView(Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("success");
+        return modelAndView;
     }
 }
