@@ -287,10 +287,37 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+		$('form').submit(function(event) {
+			event.preventDefault(); // Prevent the form from submitting
 
+			// Clear previous error messages
+			$('.error').hide();
 
+			// Validate name
+			const name = $('#name').val();
+			if (name === '') {
+				$('#err-name').show();
+				return false;
+			}
 
+			// Validate email
+			const email = $('#email').val();
+			if (email === '') {
+				$('#err-email').show();
+				return false;
+			}
+			// Check if the email is in a valid format
+			const emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			if (!emailRegex.test(email)) {
+				$('#err-emailvld').show();
+				return false;
+			}
 
+			// If all validations pass, submit the form
+			$('form')[0].submit();
+		});
+	});
 
 
 jQuery(document).ready(function () { 
