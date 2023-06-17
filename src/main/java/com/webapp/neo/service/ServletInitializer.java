@@ -1,5 +1,6 @@
-package com.webapp.neo.webapp.neo;
+package com.webapp.neo.service;
 
+import com.webapp.neo.Application.Application;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

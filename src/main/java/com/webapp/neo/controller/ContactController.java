@@ -1,5 +1,7 @@
-package com.webapp.neo.webapp.neo;
+package com.webapp.neo.controller;
 
+import com.webapp.neo.model.ContactForm;
+import com.webapp.neo.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

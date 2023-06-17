@@ -1,4 +1,4 @@
-package com.webapp.neo.webapp.neo;
+package com.webapp.neo.controller;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;

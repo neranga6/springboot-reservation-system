@@ -1,4 +1,4 @@
-package com.webapp.neo.webapp.neo;
+package com.webapp.neo.model;
 
 import lombok.Data;
 
